@@ -136,7 +136,7 @@ with sqlite3.connect(db_file_path) as conn:
 
                         # Вставка данных в таблицу
                         cur.execute(
-                            f"INSERT OR IGNORE INTO {table_name} VALUES (?,?,?,?,?,?,?,?)",
+                            f"INSERT OR REPLACE INTO {table_name} VALUES (?,?,?,?,?,?,?,?)",
                             unixtime_row,
                         )
 
